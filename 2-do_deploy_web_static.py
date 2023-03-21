@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-from fabric.api import put, run, local, env
-from os import path
+"""
+Fabric script that distributes an archive to your web servers
+"""
 
+from datetime import datetime
+from fabric.api import *
+import os
 
 env.hosts = ["18.209.179.30", "100.26.232.3"]
-
 env.user = "ubuntu"
 
 
